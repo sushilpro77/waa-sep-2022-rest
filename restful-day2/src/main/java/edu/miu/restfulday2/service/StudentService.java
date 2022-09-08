@@ -7,11 +7,11 @@ import java.util.List;
 
 public interface StudentService {
 
-    public Student save(Student student);
+    public StudentDTO save(StudentDTO student);
 
     public List<StudentDTO> getAll();
 
-    public Student update(Student student);
+    public StudentDTO update(StudentDTO student);
 
     boolean delete(Integer id);
 }

@@ -21,8 +21,10 @@ public class StudentServiceImpl implements StudentService {
     private ModelMapper modelMapper;
 
     @Override
-    public Student save(Student student) {
-        return studentRepo.save(student);
+    public StudentDTO save(StudentDTO student) {
+        Student student1 = studentRepo.save(modelMapper.map(student, Student.class));
+        return  modelMapper.map(student1, StudentDTO.class);
+
     }
 
     @Override
@@ -32,8 +34,9 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Student update(Student student) {
-        return studentRepo.update(student);
+    public StudentDTO update(StudentDTO student) {
+        Student student1 = studentRepo.update(modelMapper.map(student, Student.class));
+        return modelMapper.map(student1, StudentDTO.class);
     }
 
     @Override

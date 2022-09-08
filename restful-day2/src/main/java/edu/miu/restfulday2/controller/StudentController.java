@@ -23,13 +23,13 @@ public class StudentController {
 
     //post
     @PostMapping
-    public Student createStudent(Student student){
+    public StudentDTO createStudent(@RequestBody StudentDTO student){
         return studentService.save(student);
     }
 
     //update
     @PutMapping
-    public Student update(Student student){
+    public StudentDTO update(@RequestBody StudentDTO student){
         return studentService.update(student);
     }
 
