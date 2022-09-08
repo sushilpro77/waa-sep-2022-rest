@@ -22,13 +22,13 @@ public class StudentController {
 
     //post
     @PostMapping
-    public Student createStudent(Student student){
+    public Student createStudent(@RequestBody Student student){
         return studentService.save(student);
     }
 
     //update
     @PutMapping
-    public Student update(Student student){
+    public Student update(@RequestBody Student student){
         return studentService.update(student);
     }
 
