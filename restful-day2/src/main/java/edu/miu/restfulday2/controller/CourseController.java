@@ -1,6 +1,7 @@
 package edu.miu.restfulday2.controller;
 
 import edu.miu.restfulday2.entity.Course;
+import edu.miu.restfulday2.entity.dto.CourseDTO;
 import edu.miu.restfulday2.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,19 +17,19 @@ public class CourseController {
 
     //get
     @GetMapping
-    public List<Course> findAll(){
+    public List<CourseDTO> findAll(){
         return courseService.getAll();
     }
 
     //post
     @PostMapping
-    public Course createCourse(@RequestBody Course course){
+    public CourseDTO createCourse(@RequestBody CourseDTO course){
         return courseService.save(course);
     }
 
     //update
     @PutMapping
-    public Course updateCourse(@RequestBody Course course){
+    public CourseDTO updateCourse(@RequestBody CourseDTO course){
         return courseService.update(course);
     }
 

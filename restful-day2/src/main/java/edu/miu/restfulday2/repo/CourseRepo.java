@@ -1,6 +1,7 @@
 package edu.miu.restfulday2.repo;
 
 import edu.miu.restfulday2.entity.Course;
+import edu.miu.restfulday2.entity.dto.CourseDTO;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

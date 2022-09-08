@@ -1,16 +1,17 @@
 package edu.miu.restfulday2.service;
 
 import edu.miu.restfulday2.entity.Course;
-import edu.miu.restfulday2.entity.Student;
+import edu.miu.restfulday2.entity.dto.CourseDTO;
 
 import java.util.List;
 
 public interface CourseService {
-    Course save(Course course);
 
-    List<Course> getAll();
+    CourseDTO save(CourseDTO course);
 
-    Course update(Course course);
+    List<CourseDTO> getAll();
+
+    CourseDTO update(CourseDTO course);
 
     void delete(Integer id);
 }

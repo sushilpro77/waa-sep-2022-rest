@@ -1,6 +1,7 @@
 package edu.miu.restfulday2.controller;
 
 import edu.miu.restfulday2.entity.Student;
+import edu.miu.restfulday2.entity.dto.StudentDTO;
 import edu.miu.restfulday2.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +17,7 @@ public class StudentController {
 
     //get
     @GetMapping
-    public List<Student> findAll() {
+    public List<StudentDTO> findAll() {
         return studentService.getAll();
     }
 
